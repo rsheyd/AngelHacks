@@ -1,0 +1,27 @@
+Sharing Intents
+
+{
+  "intents": [
+    {
+      "intent": "BadIntent"
+    },
+    {
+      "intent": "IntentFour"
+    },
+    {
+      "intent": "IntentFive"
+    },
+    {
+      "intent": "IntentSix"
+    },
+    {
+      "intent": "IntentSeven"
+    },
+    {
+      "intent": "IntentEight"
+    },
+    {
+      "intent": "IntentNine"
+    }
+  ]
+}
