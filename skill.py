@@ -53,9 +53,6 @@ def goal_time():
 	time = 'Great! Now that you have a specific, measurable and realistic goal, what is a realistic time frame to complete your goal?'
 	return statement(time)
 
-@ask.intent("Intent 10")
-def check():
-	
 
 if __name__ == "__main__":
 	app.run(debug=True)
