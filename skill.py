@@ -20,14 +20,14 @@ def start_skill():
 
 @ask.intent("NegativeFeelingResponse")
 def find_emotion(feeling):
-    sympathy = "That sounds tough. What emotions are you feeling right now?"
-    return statement(sympathy)    
+    sympathy = "Wow, that seems like a lot to deal with and I can \
+            imagine it's very difficult. Could you imagine things \
+            being different?"
+    return statement(sympathy)
 
 @ask.intent("FeelingExplanationResponse")
 def sympathize():
-	symp = "Wow, that seems like a lot to deal with and I can \
-            imagine it's very difficult. Could you imagine things \
-            being different?"
+	symp = "That sounds tough. What emotions are you feeling right now?"
 	return question(symp)
 
 @ask.intent("PotentialActionResponse")
