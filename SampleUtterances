@@ -1,4 +1,6 @@
-NegativeFeelingResponse I am feeling anxious and alone
+NegativeFeelingResponse I am feeling {feeling}
+NegativeFeelingResponse I feel {feeling}
+NegativeFeelingResponse {feeling}
 
 FeelingExplanationResponse I do not know who to talk to about my project that I am presenting tomorrow
 
@@ -8,6 +10,16 @@ GoalResponse I can reach out to one of the super friendly cool mentors at AngelH
 
 QualifyGoalResponse When I sit down and have a better idea of how to present an idea
 
-GoalRealisticAnswer Yeah
+NoIntent no
+NoIntent nah
+NoIntent nope
+NoIntent not really
 
-DateTargetSet I will find and talk to a mentor in fifteen minutes
+YesIntent yes
+YesIntent yeah
+YesIntent yup
+
+DateTargetSet In {datetime}
+DateTargetSet On {datetime}
+DateTargetSet At {datetime}
+DateTargetSet {datetime}

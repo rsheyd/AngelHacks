@@ -16,10 +16,13 @@
       "intent": "FeelingExplanationResponse"
     },
     {
-      "intent": "NegativeFeelingResponse"
-    },
-    {
-      "intent": "GoalRealisticAnswer"
+      "intent": "NegativeFeelingResponse",
+      "slots": [
+        {
+          "name": "feeling",
+          "type": "feeling"
+        }
+      ]
     },
     {
       "intent": "GoalResponse"
@@ -28,7 +31,19 @@
       "intent": "PotentialActionResponse"
     },
     {
-      "intent": "DateTargetSet"
+      "intent": "DateTargetSet",
+      "slots": [
+        {
+          "name": "datetime",
+          "type": "datetime"
+        }
+      ]
+    },
+    {
+      "intent": "NoIntent"
+    },
+    {
+      "intent": "YesIntent"
     }
   ]
 }

@@ -7,6 +7,7 @@ import unidecode
 
 app = Flask (__name__)
 ask = Ask(app, "/skill")
+goalTries = 1
 
 @app.route('/')
 def homepage():
@@ -14,13 +15,15 @@ def homepage():
 
 @ask.launch
 def start_skill():
-	start = 'Tell me about how you are feeling'
+	start = 'Tell me about how you are feeling?'
  	return question(start)
 
 @ask.intent("NegativeFeelingResponse")
-def find_emotion():
-	emotion_q = "How do you know you are feeling this way?"
-	return question(emotion_q)
+def find_emotion(feeling):
+    sympathy = "I am sorry you're feeling {}. What's \
+                something you can do that might help?" \
+                .format(feeling)
+    return statement(sympathy)    
 
 @ask.intent("FeelingExplanationResponse")
 def sympathize():
@@ -32,7 +35,7 @@ def sympathize():
 @ask.intent("PotentialActionResponse")
 def goal_set():
 	goal = 'That is great! What is a specific goal you can make \
-            that can imporve your situation?'
+            that can improve your situation?'
 	return question(goal)
 
 @ask.intent("GoalResponse")
@@ -47,15 +50,31 @@ def achievable():
 	achieve = 'Do you think this is an achievable and realistic goal?'
 	return question(achieve)
 
-@ask.intent("GoalRealisticAnswer")
+@ask.intent("YesIntent")
 def goal_time():
-	time = 'Great! Now that you have a specific, measurable and realistic \
-            goal, what is a realistic time frame to complete your goal?'
-	return question(time)
+    global goalTries
+    goalTries = 1
+    time = 'Great! Now that you have a specific, measurable and realistic \
+            goal, what is a specific timeframe to complete your goal?'
+    return question(time)
+
+@ask.intent("NoIntent")
+def ask_new_goal():
+    global goalTries
+    if goalTries > 2:
+        goalTries = 1
+        return statement("It can be tough to set a realistic goal. \
+            Sometimes it helps me to take a walk or listen to music \
+            to get a new perspective. Let's try again later.")
+    else:
+        goalTries = goalTries + 1
+        return question("That's okay. Tell me another action that \
+            may be more realistic.")        
 
 @ask.intent("DateTargetSet")
-def finish():
-    ending = 'Good job, and good luck!'
+def finish(datetime):
+    ending = 'I will remind you in {}. Good job, and good luck!' \
+            .format(datetime)
     return statement(ending)
 
 if __name__ == "__main__":
