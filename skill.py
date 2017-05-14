@@ -23,7 +23,7 @@ def find_emotion(feeling):
     sympathy = "Wow, that seems like a lot to deal with and I can \
             imagine it's very difficult. Could you imagine things \
             being different?"
-    return statement(sympathy)
+    return question(sympathy)
 
 @ask.intent("FeelingExplanationResponse")
 def sympathize():
