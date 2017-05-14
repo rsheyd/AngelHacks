@@ -49,6 +49,8 @@ def achievable():
 
 @ask.intent("GoalRealisticAnswer")
 def goal_time():
+	time = 'Great! Now that you have a specific, measurable and realistic \
+            goal, what is a realistic time frame to complete your goal?'
 	return question(time)
 
 @ask.intent("DateTargetSet")
