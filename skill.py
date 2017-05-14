@@ -15,21 +15,19 @@ def homepage():
 
 @ask.launch
 def start_skill():
-	start = 'Tell me about how you are feeling?'
+	start = "What's going on for you today?"
  	return question(start)
 
 @ask.intent("NegativeFeelingResponse")
 def find_emotion(feeling):
-    sympathy = "I am sorry you're feeling {}. What's \
-                something you can do that might help?" \
-                .format(feeling)
+    sympathy = "That sounds tough. What emotions are you feeling right now?"
     return statement(sympathy)    
 
 @ask.intent("FeelingExplanationResponse")
 def sympathize():
-	symp = 'Wow, that seems like a lot to deal with and I can \
-            imagine very difficult. Could you imagine things \
-            being different?'
+	symp = "Wow, that seems like a lot to deal with and I can \
+            imagine it's very difficult. Could you imagine things \
+            being different?"
 	return question(symp)
 
 @ask.intent("PotentialActionResponse")
@@ -41,20 +39,19 @@ def goal_set():
 @ask.intent("GoalResponse")
 def goal_set_enviro():
 	enviro = 'Identifying a goal is the first step. Next is knowing \
-              when you have achieved this goal. How do you know when \
-              your goals have been met? What will this look like?'
+              when you have achieved this goal. What will this look like?'
 	return question(enviro)
 
 @ask.intent("QualifyGoalResponse")
 def achievable():
-	achieve = 'Do you think this is an achievable and realistic goal?'
+	achieve = 'Do you think that this is an achievable, and realistic, goal?'
 	return question(achieve)
 
 @ask.intent("YesIntent")
 def goal_time():
     global goalTries
     goalTries = 1
-    time = 'Great! Now that you have a specific, measurable and realistic \
+    time = 'Awesome! Now that you have a specific, measurable and realistic \
             goal, what is a specific timeframe to complete your goal?'
     return question(time)
 
@@ -73,7 +70,7 @@ def ask_new_goal():
 
 @ask.intent("DateTargetSet")
 def finish(datetime):
-    ending = 'I will remind you in {}. Good job, and good luck!' \
+    ending = 'Great. I will follow up with you on {} evening. Good luck!' \
             .format(datetime)
     return statement(ending)
 
