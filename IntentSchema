@@ -16,13 +16,13 @@
       "intent": "FeelingExplanationResponse"
     },
     {
-      "intent": "NegativeFeelingResponse",
       "slots": [
         {
           "name": "feeling",
           "type": "feeling"
         }
-      ]
+      ],
+      "intent": "NegativeFeelingResponse"
     },
     {
       "intent": "GoalResponse"
@@ -31,13 +31,13 @@
       "intent": "PotentialActionResponse"
     },
     {
-      "intent": "DateTargetSet",
       "slots": [
         {
           "name": "datetime",
           "type": "datetime"
         }
-      ]
+      ],
+      "intent": "DateTargetSet"
     },
     {
       "intent": "NoIntent"

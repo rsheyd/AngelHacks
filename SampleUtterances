@@ -1,14 +1,14 @@
+FeelingExplanationResponse I keep butting heads and fighting with Kiersten at work.
+
 NegativeFeelingResponse I am feeling {feeling}
 NegativeFeelingResponse I feel {feeling}
 NegativeFeelingResponse {feeling}
 
-FeelingExplanationResponse I do not know who to talk to about my project that I am presenting tomorrow
+PotentialActionResponse Yeah I can imagine things being different.
 
-PotentialActionResponse I could share my worries with someone who has experience and is nice and they could give me some pointers
+GoalResponse I guess I could talk to Kiersten.
 
-GoalResponse I can reach out to one of the super friendly cool mentors at AngelHacks and they can spend some time helping me
-
-QualifyGoalResponse When I sit down and have a better idea of how to present an idea
+QualifyGoalResponse Kiersten will know how I feel about this situation after I've talked with her.
 
 NoIntent no
 NoIntent nah
@@ -19,6 +19,7 @@ YesIntent yes
 YesIntent yeah
 YesIntent yup
 
+DateTargetSet I could talk to her on {datetime} at two pm.
 DateTargetSet In {datetime}
 DateTargetSet On {datetime}
 DateTargetSet At {datetime}
