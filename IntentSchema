@@ -10,9 +10,6 @@
       "intent": "AMAZON.StopIntent"
     },
     {
-      "intent": "BadIntent"
-    },
-    {
       "intent": "QualifyGoalResponse"
     },
     {
@@ -29,6 +26,9 @@
     },
     {
       "intent": "PotentialActionResponse"
+    },
+    {
+      "intent": "DateTargetSet"
     }
   ]
 }
