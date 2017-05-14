@@ -1,27 +1,34 @@
-Sharing Intents
-
 {
   "intents": [
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
     {
       "intent": "BadIntent"
     },
     {
-      "intent": "IntentFour"
+      "intent": "QualifyGoalResponse"
     },
     {
-      "intent": "IntentFive"
+      "intent": "FeelingExplanationResponse"
     },
     {
-      "intent": "IntentSix"
+      "intent": "NegativeFeelingResponse"
     },
     {
-      "intent": "IntentSeven"
+      "intent": "GoalRealisticAnswer"
     },
     {
-      "intent": "IntentEight"
+      "intent": "GoalResponse"
     },
     {
-      "intent": "IntentNine"
+      "intent": "PotentialActionResponse"
     }
   ]
 }

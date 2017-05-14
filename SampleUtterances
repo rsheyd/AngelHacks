@@ -1,13 +1,7 @@
 BadIntent I am feeling stressed
-
-IntentFour I am feeling anxious and alone
-
-IntentFive I do not know who to talk to about my project that I am presenting tomorrow
-
-IntentSix I could share my worries with someone who has experience and is nice and they could give me some pointers
-
-IntentSeven I can reach out to one of the super friendly cool mentors at AngelHacks and they can spend some time helping me
-
-IntentEight When I sit down and have a better idea of how to present an idea
-
-IntentNine Yeah
+QualifyGoalResponse When I sit down and have a better idea of how to present an idea
+FeelingExplanationResponse I do not know who to talk to about my project that I am presenting tomorrow
+NegativeFeelingResponse I am feeling anxious and alone
+GoalRealisticAnswer Yeah
+GoalResponse I can reach out to one of the super friendly cool mentors at AngelHacks and they can spend some time helping me
+PotentialActionResponse I could share my worries with someone who has experience and is nice and they could give me some pointers
